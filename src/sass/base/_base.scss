@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as *;
+
+body {
+    color: $clr-white;
+	// background: linear-gradient(243.26deg, $clr-blue-darker -3.65%, $clr-blue 49.28%, $clr-blue-light 102.43%);
+    background: linear-gradient(243.26deg, $clr-blue-darker -3.65%, $clr-blue 102.43%);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    // footer stick to the bottom of the page
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}

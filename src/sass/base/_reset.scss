@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input,
+textarea {
+	width: 100%;
+	margin: inherit;
+	padding: inherit;
+	border: none;
+	outline: none;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+
+	&::placeholder {
+		color: inherit;
+	}
+}

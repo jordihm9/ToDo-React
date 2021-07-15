@@ -1,0 +1,12 @@
+@import '../abstracts/fonts';
+
+body,
+input,
+button {
+	font-family: 'Overpass', sans-serif;
+	letter-spacing: .15em
+}
+
+.text-center {
+	text-align: center;
+}

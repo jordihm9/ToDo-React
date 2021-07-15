@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: inherit;
+  padding: inherit;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: inherit;
+}
+
+body {
+  color: #E6F4F1;
+  background: linear-gradient(243.26deg, #477F90 -3.65%, #59B7D3 102.43%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body,
+input,
+button {
+  font-family: "Overpass", sans-serif;
+  letter-spacing: 0.15em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.title {
+  margin: 1em auto 0.35em auto;
+  text-align: center;
+  font-size: 3.5em;
+}
+
+.list {
+  margin: auto;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5em;
+  list-style: none;
+}
+
+.item {
+  padding: 1em 2.5em;
+  border-radius: 0.75em;
+  font-weight: 600;
+  position: relative;
+  box-shadow: inset 0 0 10em 10000px rgba(230, 244, 241, 0.25);
+}
+
+.item-input {
+  position: relative;
+}
+
+.item-input > input {
+  padding-right: 3em;
+  position: relative;
+  box-shadow: inset 0 0 10em 10000px rgba(230, 244, 241, 0.15);
+}
+
+.item-input > input::placeholder {
+  color: rgba(230, 244, 241, 0.85);
+}
+
+.item-input .cross {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.item-input .cross:before, .item-input .cross:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 0.15rem;
+  background: rgba(230, 244, 241, 0.5);
+}
+
+.item-input .cross:after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.item-input .cross:hover:before, .item-input .cross:hover:after {
+  background: #E6F4F1;
+}
+
+/*# sourceMappingURL=style.css.map */

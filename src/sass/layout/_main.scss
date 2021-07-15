@@ -1,0 +1,69 @@
+@use '../abstracts/variables' as *;
+@use '../components/glass' as *;
+
+.title {
+	margin: 1em auto .35em auto;
+	text-align: center;
+	font-size: 3.5em;
+}
+
+.list {
+	margin: auto;
+	width: 30rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	gap: 1.5em;
+	list-style: none;
+}
+
+.item {
+    padding: 1em 2.5em;
+    border-radius: .75em;
+    font-weight: 600;
+    @include glass(.25);
+}
+
+.item-input {
+    position: relative;
+
+    & > input  {
+        padding-right: 3em; // give some space for the add button
+        @include glass;
+
+        &::placeholder {
+            color: rgba($clr-white, .85);
+        }
+    }
+
+    .cross {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            height: .15rem;
+            background: rgba($clr-white, .5);
+        }
+
+        &:after {
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        &:hover:before,
+        &:hover:after {
+            background: $clr-white;
+        }
+    }
+}
