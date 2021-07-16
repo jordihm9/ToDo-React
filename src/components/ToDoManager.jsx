@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 
 import AddItemForm from './AddItemForm';
-import ToDoList from './ToDoList';
+import List from './List';
 
-function ToDoManager(props) {
-	const [data, setItems] = useState(props.data);
+const ToDoManager = (props) => {
+	const [items, setItems] = useState(props.data);
 
 	function addItem(item) {
-		setItems([...data, item]);
+		setItems([...items, item]);
 	}
 
 	return (
 		<div className="container list">
 			<AddItemForm addItem={addItem} />
-			<ToDoList data={data} />
+			<List data={items} />
 		</div>
 	);
 }
