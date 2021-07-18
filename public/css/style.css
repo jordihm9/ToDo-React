@@ -60,11 +60,36 @@ button {
 }
 
 .item {
+  position: relative;
   padding: 1em 2.5em;
   border-radius: 0.75em;
   font-weight: 600;
   position: relative;
   box-shadow: inset 0 0 10em 10000px rgba(230, 244, 241, 0.25);
+}
+
+.item__text {
+  padding-left: 1em;
+}
+
+.item__checkbox {
+  position: absolute;
+  top: 50%;
+  left: calc(3.5em / 2);
+  transform: translate(-50%, -50%);
+  width: 1em;
+  height: 1em;
+  border: 0.15em solid #E6F4F1;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.item__checkbox.completed {
+  background: #E6F4F1;
+}
+
+.item__checkbox.completed + .item__text {
+  text-decoration: line-through;
 }
 
 .item-input {

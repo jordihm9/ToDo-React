@@ -18,10 +18,36 @@
 }
 
 .item {
+    position: relative;
     padding: 1em 2.5em;
     border-radius: .75em;
     font-weight: 600;
     @include glass(.25);
+}
+
+.item__text {
+    padding-left: 1em;
+}
+
+.item__checkbox {
+    position: absolute;
+    top: 50%;
+    // between the left side of the item and the text
+    left: calc(3.5em / 2);
+    transform: translate(-50%, -50%);
+    width: 1em;
+    height: 1em;
+    border: .15em solid $clr-white;
+    border-radius: .5em;
+    cursor: pointer;
+
+    &.completed {
+        background: $clr-white;
+
+        & + .item__text {
+            text-decoration: line-through;
+        }
+    }
 }
 
 .item-input {
