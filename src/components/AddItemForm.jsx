@@ -17,7 +17,7 @@ const AddItemForm = (props) => {
 
 	return (
 		<form method="POST" onSubmit={handleSubmit} className="item-input">
-			<input type="text" name="item-name" id="item-name" value={item} placeholder="Add to do..." onChange={handleChange} className="item" required autoFocus />
+			<input type="text" name="item-input" id="item-input" value={item} placeholder="Add to do..." aria-label="item-input" onChange={handleChange} className="item" required autoFocus />
 			<span title="Add" className="cross" onClick={handleSubmit}></span>
 		</form>
 	);

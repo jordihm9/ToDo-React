@@ -24,10 +24,13 @@ const ToDoManager = (props) => {
 	}
 
 	return (
-		<div className="container list">
-			<AddItemForm addItem={addItem} />
-			<List data={items} setItems={setItems} />
-		</div>
+		<React.Fragment>
+			<div className="title">To Do App</div>
+			<div className="container list">
+				<AddItemForm addItem={addItem} />
+				<List data={items} setItems={setItems} />
+			</div>
+		</React.Fragment>
 	);
 }
 
