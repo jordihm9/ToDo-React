@@ -43,9 +43,21 @@ describe('<ToDoManager />', () => {
 
 	// 	test('click on the checkbox and set the item to completed', () => {
 	// 		const item = wrapper.getByText(todoText);
-
+	// 	});
+	// 	test('click on the checkbox and set the item to not completed', () => {
 	// 	});
 	// });
+
+	describe('should remove the item by', () => {
+		test('clicking on the bin icon', () => {
+			updateInput(todoText);
+			fireEvent.submit(wrapper.getByTitle(/add/i));
+
+			fireEvent.click(wrapper.getByAltText('bin'));
+
+			expect(wrapper.queryByText(todoText)).toBeNull();
+		});
+	});
 
 	function updateInput(text) {
 		// simulate user writes down to the input

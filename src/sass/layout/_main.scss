@@ -50,6 +50,19 @@
     }
 }
 
+.bin__icon {
+    position: absolute;
+    top: 50%;
+    right: calc(2.5em / 2);
+    transform: translate(0%, -50%);
+    filter: brightness(.9);
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(1);
+    }
+}
+
 .item-input {
     position: relative;
 
@@ -80,7 +93,8 @@
             transform: translateY(-50%);
             width: 100%;
             height: .15rem;
-            background: rgba($clr-white, .5);
+            background: $clr-white;
+            filter: brightness(.9);
         }
 
         &:after {
@@ -89,7 +103,7 @@
 
         &:hover:before,
         &:hover:after {
-            background: $clr-white;
+            filter: brightness(1);
         }
     }
 }

@@ -92,6 +92,19 @@ button {
   text-decoration: line-through;
 }
 
+.bin__icon {
+  position: absolute;
+  top: 50%;
+  right: calc(2.5em / 2);
+  transform: translate(0%, -50%);
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+
+.bin__icon:hover {
+  filter: brightness(1);
+}
+
 .item-input {
   position: relative;
 }
@@ -124,7 +137,8 @@ button {
   transform: translateY(-50%);
   width: 100%;
   height: 0.15rem;
-  background: rgba(230, 244, 241, 0.5);
+  background: #E6F4F1;
+  filter: brightness(0.9);
 }
 
 .item-input .cross:after {
@@ -132,7 +146,7 @@ button {
 }
 
 .item-input .cross:hover:before, .item-input .cross:hover:after {
-  background: #E6F4F1;
+  filter: brightness(1);
 }
 
 /*# sourceMappingURL=style.css.map */

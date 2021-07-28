@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Item = ({item, items, setItems}) => {
+const Item = ({item, items, setItems, }) => {
 	/**
 	 * Update the items reverting the completed status of the desired item
 	 */
@@ -16,10 +16,20 @@ const Item = ({item, items, setItems}) => {
 		}));
 	}
 
+	function removeHandler() {
+		setItems(items.reduce((acc, val) => {
+			if (val.id !== item.id) {
+				acc.push(val);
+			}
+			return acc;
+		}, []));
+	}
+
 	return (
 		<li className="item">
 			<span className={`item__checkbox ${item.completed ? 'completed' : ''}`} onClick={completedHandler}></span>
 			<span className="item__text">{item.text}</span>
+			<img src="/images/icons/bin.svg" alt="bin" className="bin__icon" onClick={removeHandler} />
 		</li>
 	);
 }
