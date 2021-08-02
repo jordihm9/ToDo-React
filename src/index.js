@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ToDoManager from './components/ToDoManager';
+import App from './App';
 
 ReactDOM.render(
-	<ToDoManager data={[]}/>,
+	<App />,
 	document.getElementById('root')
 );

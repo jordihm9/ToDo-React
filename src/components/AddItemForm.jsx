@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-const AddItemForm = (props) => {
+const AddItemForm = ({ addItem }) => {
 	const [item, setItem] = useState('');
 
 	function handleSubmit(e) {
 		e.preventDefault(); // prevent submiting
 		if (item === '') return; // validate the item is not empty
 		// call the function passed by props from the parent component (ToDoManager)
-		props.addItem(item); // add the new item to the list
+		addItem(item); // add the new item to the lists
 		setItem(''); // clear the input field
 	}
 
