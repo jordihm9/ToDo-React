@@ -26,8 +26,8 @@ const Item = ({item, items, setItems, }) => {
 	}
 
 	return (
-		<li className="item">
-			<span className={`item__checkbox ${item.completed ? 'completed' : ''}`} onClick={completedHandler}></span>
+		<li className={`item ${item.completed ? 'completed' : ''}`}>
+			<span data-testid="completed-checkbox" className="item__checkbox" onClick={completedHandler}></span>
 			<span className="item__text">{item.text}</span>
 			<img src="/images/icons/bin.svg" alt="bin" className="bin__icon" onClick={removeHandler} />
 		</li>

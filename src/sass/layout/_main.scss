@@ -23,6 +23,16 @@
     border-radius: .75em;
     font-weight: 600;
     @include glass(.25);
+
+    &.completed {
+        & > .item__checkbox {
+            background: $clr-white;
+        }
+
+        & > .item__text {
+            text-decoration: line-through;
+        }
+    }
 }
 
 .item__text {
@@ -40,14 +50,6 @@
     border: .15em solid $clr-white;
     border-radius: .5em;
     cursor: pointer;
-
-    &.completed {
-        background: $clr-white;
-
-        & + .item__text {
-            text-decoration: line-through;
-        }
-    }
 }
 
 .bin__icon {
